@@ -1,0 +1,9 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: teal;
+  color: white;
+  height: 60px;
+  padding: 0px 30px;
+}
