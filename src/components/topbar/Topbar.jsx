@@ -1,3 +1,4 @@
+import { FiSearch } from "react-icons/fi";
 import styles from "./Topbar.module.css";
 
 function Topbar() {
@@ -10,7 +11,8 @@ function Topbar() {
       </div>
       <div className={styles.middle}>
         <div className={styles.searchBox}>
-          <input type="text" placeholder="search" />
+          <FiSearch className={styles.searchIcon} width={24} color="white" />
+          <input type="text" placeholder="Search for friends, post and video" />
         </div>
       </div>
       <div className={styles.right}>right</div>
