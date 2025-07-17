@@ -1,6 +1,10 @@
+import ProfileRightbar from "../profile-right-bar/ProfileRightbar";
 import styles from "./Rightbar.module.css";
 
-function Rightbar() {
+function Rightbar({ rightbar }) {
+  if (rightbar) {
+    return <ProfileRightbar />;
+  }
   return (
     <div className={styles.rightbar}>
       <div className={styles.wrapper}>

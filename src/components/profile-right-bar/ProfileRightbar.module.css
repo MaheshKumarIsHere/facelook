@@ -1,0 +1,54 @@
+.container {
+  flex: 2;
+}
+
+.wrapper {
+  padding: 12px;
+}
+
+.info {
+  padding: 10px;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  .box {
+    span {
+      font-size: 14px;
+      font-weight: 600;
+      &:last-child {
+        font-weight: 400;
+        color: gray;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.freinds {
+  padding: 10px;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+  .friendList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    .friend {
+      background-color: whitesmoke;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+      }
+    }
+  }
+}
