@@ -1,0 +1,58 @@
+.container {
+  box-shadow: 0px 0px 5px lightgray;
+  border-radius: 16px;
+  padding: 24px;
+  hr {
+    margin: 20px 0;
+    border: none;
+    border-bottom: 1px solid lightgray;
+  }
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  img {
+    border-radius: 100%;
+  }
+  input {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  button {
+    min-width: fit-content;
+    padding: 8px 16px;
+    border: none;
+    background-color: teal;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-radius: 8px;
+    span {
+      margin-left: 8px;
+    }
+    &:hover {
+      background-color: rgb(0, 94, 94);
+      cursor: pointer;
+    }
+  }
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .iconBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    span {
+      color: #202020;
+    }
+  }
+}
