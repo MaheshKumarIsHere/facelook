@@ -51,6 +51,46 @@ const friends = [
     title: "Jane Smith",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDGMp734S91sDuUFqL51_xRTXS15iiRoHew&s",
   },
+  {
+    id: 3,
+    title: "Jone Doe",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDGMp734S91sDuUFqL51_xRTXS15iiRoHew&s",
+  },
+  {
+    id: 4,
+    title: "Jane Smith",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDGMp734S91sDuUFqL51_xRTXS15iiRoHew&s",
+  },
+  {
+    id: 5,
+    title: "Jone Doe",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDGMp734S91sDuUFqL51_xRTXS15iiRoHew&s",
+  },
+  {
+    id: 6,
+    title: "Jane Smith",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDGMp734S91sDuUFqL51_xRTXS15iiRoHew&s",
+  },
+  {
+    id: 7,
+    title: "Jone Doe",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDGMp734S91sDuUFqL51_xRTXS15iiRoHew&s",
+  },
+  {
+    id: 8,
+    title: "Jane Smith",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDGMp734S91sDuUFqL51_xRTXS15iiRoHew&s",
+  },
+  {
+    id: 9,
+    title: "Jone Doe",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDGMp734S91sDuUFqL51_xRTXS15iiRoHew&s",
+  },
+  {
+    id: 10,
+    title: "Jane Smith",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDGMp734S91sDuUFqL51_xRTXS15iiRoHew&s",
+  },
 ];
 
 function Leftbar() {

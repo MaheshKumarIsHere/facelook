@@ -1,8 +1,17 @@
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
 .leftbar {
   flex: 1;
   /* background-color: rebeccapurple; */
   height: calc(100vh - 60px);
   padding: 12px;
+  /* background-color: teal; */
 }
 
 .wrapper {
@@ -10,8 +19,10 @@
   color: white;
   height: 100%;
   width: 100%;
+  overflow-y: auto;
   border-radius: 16px;
   padding: 8px 16px;
+  margin-right: 10px;
 }
 
 .items {
@@ -33,10 +44,12 @@
     border-radius: 8px;
     display: flex;
     align-items: center;
+    border-left: 2px solid transparent;
     gap: 12px;
     &:hover {
       background-color: rgba(255, 255, 255, 0.5);
       cursor: pointer;
+      border-color: white;
     }
   }
 }
