@@ -6,13 +6,9 @@ import styles from "./Homepage.module.css";
 
 function Homepage() {
   return (
-    <div>
-      <Topbar />
-      <div className={styles.main}>
-        <Leftbar />
-        <Feed />
-        <Rightbar />
-      </div>
+    <div className={styles.container}>
+      <Feed />
+      <Rightbar />
     </div>
   );
 }
