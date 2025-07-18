@@ -1,5 +1,5 @@
-import styles from "./LoginPage.module.css";
-function LoginPage() {
+import styles from "./SignupPage.module.css";
+function SignupPage() {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -20,18 +20,23 @@ function LoginPage() {
         </div>
         <form className={styles.form}>
           <div className={styles.inputBox}>
+            <input type="text" placeholder="Username" />
+          </div>
+          <div className={styles.inputBox}>
             <input type="text" placeholder="Email address" />
           </div>
           <div className={styles.inputBox}>
             <input type="password" placeholder="Password" />
           </div>
-          <small>Forgot Password?</small>
-          <button>Login Account</button>
+          <div className={styles.inputBox}>
+            <input type="password" placeholder="Password-Confirm" />
+          </div>
+          <button>Create Account</button>
         </form>
         <div className={styles.extra}>
           <small>Or</small>
           <p>
-            Don't have an account? <span>Create account?</span>
+            Don't have an account? <span>Sign up?</span>
           </p>
         </div>
       </div>
@@ -39,4 +44,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default SignupPage;
