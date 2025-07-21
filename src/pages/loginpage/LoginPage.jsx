@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import styles from "./LoginPage.module.css";
 // import validator from "validator";
 import { useAuth } from "../../context/auth/AuthContext";
-import { loginCall } from "../../utils/apiCalls";
 import { useNavigate } from "react-router";
+import { login } from "../../context/auth/authActions";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -18,7 +18,7 @@ function LoginPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    loginCall({ email, password }, dispatch);
+    login({ email, password }, dispatch);
   };
 
   return (

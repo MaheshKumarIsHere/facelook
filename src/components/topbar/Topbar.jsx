@@ -2,10 +2,15 @@ import { Link } from "react-router";
 import { FiBell, FiMessageSquare, FiSearch } from "react-icons/fi";
 import styles from "./Topbar.module.css";
 import { useAuth } from "../../context/auth/AuthContext";
+import { logout } from "../../context/auth/authActions";
 
 function Topbar() {
   const { user } = useAuth();
-  console.log(user);
+
+  const handleLogoutClick = () => {
+    logout();
+  };
+
   return (
     <div className={styles.topbar}>
       <div className={styles.left}>
@@ -48,7 +53,7 @@ function Topbar() {
           ) : (
             <Link to={`profile/${user?.user.username}`}>
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDGMp734S91sDuUFqL51_xRTXS15iiRoHew&s"
+                src="/default.jpg"
                 alt=""
                 width={30}
                 height={30}
@@ -57,6 +62,9 @@ function Topbar() {
             </Link>
           )}
         </div>
+        <button className={styles.logoutBtn} onClick={handleLogoutClick}>
+          Logout
+        </button>
       </div>
     </div>
   );
