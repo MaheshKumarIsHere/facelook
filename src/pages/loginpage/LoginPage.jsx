@@ -1,5 +1,27 @@
+import { useEffect, useState } from "react";
 import styles from "./LoginPage.module.css";
+// import validator from "validator";
+import { useAuth } from "../../context/AuthContext";
+import { loginCall } from "../../utils/apiCalls";
+import { Navigate, useNavigate } from "react-router";
+
 function LoginPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { user, loading, error, dispatch } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      navigate("/", { replace: true });
+    }
+  }, [user, navigate]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    loginCall({ email, password }, dispatch);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -18,15 +40,26 @@ function LoginPage() {
         <div className={styles.logoBox}>
           <h2>Facelook</h2>
         </div>
-        <form className={styles.form}>
+        {error && <p>{error}</p>}
+        <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.inputBox}>
-            <input type="text" placeholder="Email address" />
+            <input
+              type="text"
+              name="email"
+              placeholder="Email address"
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className={styles.inputBox}>
-            <input type="password" placeholder="Password" />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
           <small>Forgot Password?</small>
-          <button>Login Account</button>
+          <button>{loading ? "Loading" : "Login Account"}</button>
         </form>
         <div className={styles.extra}>
           <small>Or</small>

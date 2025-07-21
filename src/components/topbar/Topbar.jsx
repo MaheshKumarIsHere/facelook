@@ -1,12 +1,18 @@
+import { Link } from "react-router";
 import { FiBell, FiMessageSquare, FiSearch } from "react-icons/fi";
 import styles from "./Topbar.module.css";
+import { useAuth } from "../../context/AuthContext";
 
 function Topbar() {
+  const { user } = useAuth();
+  console.log(user);
   return (
     <div className={styles.topbar}>
       <div className={styles.left}>
         <div>
-          <span>Facelook</span>
+          <Link to="/">
+            <span>Facelook</span>
+          </Link>
         </div>
       </div>
       <div className={styles.middle}>
@@ -29,13 +35,27 @@ function Topbar() {
           </div>
         </div>
         <div className={styles.iconBox}>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDGMp734S91sDuUFqL51_xRTXS15iiRoHew&s"
-            alt=""
-            width={30}
-            height={30}
-            className={styles.img}
-          />
+          {user?.user?.profilePic ? (
+            <Link to={`profile/${user?.user.username}`}>
+              <img
+                src={user.user.profilePic}
+                alt=""
+                width={30}
+                height={30}
+                className={styles.img}
+              />
+            </Link>
+          ) : (
+            <Link to={`profile/${user?.user.username}`}>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDGMp734S91sDuUFqL51_xRTXS15iiRoHew&s"
+                alt=""
+                width={30}
+                height={30}
+                className={styles.img}
+              />
+            </Link>
+          )}
         </div>
       </div>
     </div>

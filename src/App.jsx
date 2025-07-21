@@ -1,4 +1,5 @@
 import "./App.css";
+import { AuthContextProvider } from "./context/AuthContext";
 import Homepage from "./pages/homepage/Homepage";
 import LoginPage from "./pages/loginpage/LoginPage";
 import ProfilePage from "./pages/profilepage/ProfilePage";
@@ -31,7 +32,11 @@ const router = createBrowserRouter([
   },
 ]);
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <AuthContextProvider>
+      <RouterProvider router={router} />
+    </AuthContextProvider>
+  );
 }
 
 export default App;

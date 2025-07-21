@@ -1,9 +1,9 @@
 import ProfileRightbar from "../profile-right-bar/ProfileRightbar";
 import styles from "./Rightbar.module.css";
 
-function Rightbar({ rightbar }) {
+function Rightbar({ rightbar, user }) {
   if (rightbar) {
-    return <ProfileRightbar />;
+    return <ProfileRightbar user={user} />;
   }
   return (
     <div className={styles.rightbar}>

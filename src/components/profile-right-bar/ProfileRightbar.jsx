@@ -1,6 +1,7 @@
 import styles from "./ProfileRightbar.module.css";
 
-function ProfileRightbar() {
+function ProfileRightbar({ user }) {
+  console.log(user);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -8,15 +9,15 @@ function ProfileRightbar() {
           <p>User info</p>
           <div className={styles.box}>
             <span>City:</span>
-            <span>Gurugram</span>
+            <span>{user?.city ? user.city : "Unknown"}</span>
           </div>
           <div className={styles.box}>
             <span>From:</span>
-            <span>Haryana</span>
+            <span>{user?.from ? user.from : "Unknown"}</span>
           </div>
           <div className={styles.box}>
             <span>Relationship:</span>
-            <span>Single</span>
+            <span>{user?.relationship ? user.relationship : "Unknown"}</span>
           </div>
         </div>
         <div className={styles.freinds}>
