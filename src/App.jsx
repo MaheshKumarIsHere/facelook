@@ -1,34 +1,43 @@
 import "./App.css";
-import { AuthContextProvider } from "./context/AuthContext";
+import ProtectedRoute from "./components/protected-route/ProtectedRoute";
 import Homepage from "./pages/homepage/Homepage";
 import LoginPage from "./pages/loginpage/LoginPage";
 import ProfilePage from "./pages/profilepage/ProfilePage";
 import RootLayout from "./pages/root-layout/RootLayout";
 import SignupPage from "./pages/signup/SignupPage";
+import { AuthContextProvider } from "./context/AuthContext";
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: RootLayout,
+    element: <RootLayout />,
     children: [
       {
         index: true,
-        Component: Homepage,
+        element: (
+          <ProtectedRoute>
+            <Homepage />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "profile/:username",
-        Component: ProfilePage,
+        element: (
+          <ProtectedRoute>
+            <ProfilePage />
+          </ProtectedRoute>
+        ),
       },
     ],
   },
   {
     path: "/signup",
-    Component: SignupPage,
+    element: <SignupPage />,
   },
   {
     path: "/login",
-    Component: LoginPage,
+    element: <LoginPage />,
   },
 ]);
 function App() {

@@ -1,21 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./LoginPage.module.css";
 // import validator from "validator";
 import { useAuth } from "../../context/AuthContext";
 import { loginCall } from "../../utils/apiCalls";
-import { Navigate, useNavigate } from "react-router";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { user, loading, error, dispatch } = useAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (user) {
-      navigate("/", { replace: true });
-    }
-  }, [user, navigate]);
+  const { loading, error, dispatch } = useAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault();
