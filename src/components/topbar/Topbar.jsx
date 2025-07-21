@@ -3,6 +3,8 @@ import { FiBell, FiMessageSquare, FiSearch } from "react-icons/fi";
 import styles from "./Topbar.module.css";
 import { useAuth } from "../../context/auth/AuthContext";
 import { logout } from "../../context/auth/authActions";
+import Button from "../ui/button/Button";
+import IconButton from "../ui/icon-button/IconButton";
 
 function Topbar() {
   const { user } = useAuth();
@@ -28,16 +30,14 @@ function Topbar() {
       </div>
       <div className={styles.right}>
         <div className={styles.iconBox}>
-          <FiMessageSquare className={styles.icon} size={24} color="white" />
-          <div className={styles.iconBadge}>
-            <span>1</span>
-          </div>
+          <IconButton badgeValue={6}>
+            <FiMessageSquare className={styles.icon} size={24} color="white" />
+          </IconButton>
         </div>
         <div className={styles.iconBox}>
-          <FiBell className={styles.icon} size={24} color="white" />
-          <div className={styles.iconBadge}>
-            <span>89</span>
-          </div>
+          <IconButton badgeValue={"9+"}>
+            <FiBell className={styles.icon} size={24} color="white" />
+          </IconButton>
         </div>
         <div className={styles.iconBox}>
           {user?.user?.profilePic ? (
@@ -62,9 +62,7 @@ function Topbar() {
             </Link>
           )}
         </div>
-        <button className={styles.logoutBtn} onClick={handleLogoutClick}>
-          Logout
-        </button>
+        <Button onClick={handleLogoutClick}>Logout</Button>
       </div>
     </div>
   );

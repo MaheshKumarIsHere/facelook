@@ -1,0 +1,14 @@
+.btn {
+  border: none;
+  background-color: whitesmoke;
+  height: 30px;
+  padding: 0 12px;
+  text-align: center;
+  &:active {
+    outline: none;
+  }
+  &:hover {
+    background-color: white;
+    cursor: pointer;
+  }
+}
