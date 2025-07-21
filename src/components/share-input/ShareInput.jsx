@@ -1,7 +1,7 @@
 import styles from "./ShareInput.module.css";
 import { BsEmojiDizzy } from "react-icons/bs";
 import { FiMapPin, FiSend, FiTag, FiVideo } from "react-icons/fi";
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../../context/auth/AuthContext";
 import { Link } from "react-router";
 import { useState } from "react";
 import axios from "axios";

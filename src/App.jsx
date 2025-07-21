@@ -5,7 +5,7 @@ import LoginPage from "./pages/loginpage/LoginPage";
 import ProfilePage from "./pages/profilepage/ProfilePage";
 import RootLayout from "./pages/root-layout/RootLayout";
 import SignupPage from "./pages/signup/SignupPage";
-import { AuthContextProvider } from "./context/AuthContext";
+import { AuthContextProvider } from "./context/auth/AuthContext";
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 const router = createBrowserRouter([

@@ -2,7 +2,7 @@ import styles from "./FeedPostList.module.css";
 import Post from "../post/Post";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../../context/auth/AuthContext";
 
 function FeedPostList({ username }) {
   const [postList, setPostList] = useState([]);

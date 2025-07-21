@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { FiBell, FiMessageSquare, FiSearch } from "react-icons/fi";
 import styles from "./Topbar.module.css";
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../../context/auth/AuthContext";
 
 function Topbar() {
   const { user } = useAuth();
